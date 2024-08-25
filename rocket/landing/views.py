@@ -6,4 +6,7 @@ def landing_page(request):
 
 def learn_more(request):
     return render(request, 'landing/learn_more.html')
+
+def login(request):
+    return render(request,'landing/login.html')
     
