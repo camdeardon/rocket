@@ -1,0 +1,40 @@
+<!-- learn_more.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="{% static 'landing/style.css' %}">
+</head>
+<body>
+    <section class = "login">
+    <div class="registration_form">
+        <h1>Tell us about yourself</h1>
+        <h2>In order to help us match you with like minded people, tell us about your hobbies and experience</h2>
+        <div>
+        <form method="post">
+       <!-- <fieldset class = "registration_form">-->
+            <fieldset>
+                <label for="first-name">First Name:<input for id="first-name" type="text" required/></label>
+            </fieldset>
+            <fieldset>
+                <label for="last-name">Last Name: <input id="last-name" type = "text"required/></label>
+            </fieldset>
+            <fieldset>
+                <label for="email">Email: <input id="email" type = "email"required/></label>
+            </fieldset>
+            <fieldset>
+                <label for ="new-password">Create a New Password: <input id="new-password" type="password"required pattern= [a-z0-5]{8,} /></label>
+            </fieldset>
+            <button type="submit" Submit></button>
+        </fieldset>
+        </div>
+        </form>
+    </div>
+    </section>
+</body>
+<footer>
+</footer>
+</html>
