@@ -31,7 +31,11 @@ SECRET_KEY = "django-insecure-=c$sop9j2l2qzwzd$j!si&0=v0p5xzg)qa)dpcdqqk+qvvt07(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+#Add in allowed host locations
 ALLOWED_HOSTS = ['rocket-6bc96b739514.herokuapp.com','127.0.0.1','www.therocketapp.com']
+
+#Security redirect
+SECURE_SSL_REDIRECT = True
 
 
 # Application definition
