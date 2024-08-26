@@ -17,19 +17,19 @@
         <form method="post">
        <!-- <fieldset class = "registration_form">-->
             <fieldset>
+                <legend>Sign Up</legend>
                 <label for="first-name">First Name:<input for id="first-name" type="text" required/></label>
-            </fieldset>
-            <fieldset>
                 <label for="last-name">Last Name: <input id="last-name" type = "text"required/></label>
-            </fieldset>
-            <fieldset>
                 <label for="email">Email: <input id="email" type = "email"required/></label>
-            </fieldset>
-            <fieldset>
                 <label for ="new-password">Create a New Password: <input id="new-password" type="password"required pattern= [a-z0-5]{8,} /></label>
-            </fieldset>
-            <button type="submit" Submit></button>
         </fieldset>
+        <fieldset>
+            <legend>Account type (required)</legend>
+            <label for="idea"><input id="founder" type="radio" name="account-type" checked /> Founder</label>
+            <label for="joining"><input id="joining" type="radio" name="account-type" /> Joining a team</label>
+          </fieldset>
+          <button type="submit" Submit></button>
+
         </div>
         </form>
     </div>

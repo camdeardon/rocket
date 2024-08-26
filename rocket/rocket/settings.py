@@ -35,7 +35,10 @@ DEBUG = True
 ALLOWED_HOSTS = ['rocket-6bc96b739514.herokuapp.com','127.0.0.1','www.therocketapp.com']
 
 #Security redirect
-SECURE_SSL_REDIRECT = True
+SECURE_SSL_REDIRECT = False
+SESSION_COOKIE_SECURE = False
+CSRF_COOKIE_SECURE = False
+
 
 
 # Application definition
