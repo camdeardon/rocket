@@ -5,39 +5,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Sign Up Page</title>
     <link rel="stylesheet" href="{% static 'landing/style.css' %}">
 </head>
 <body>
-    <section class = "login">
-    <div class="registration_form">
-        <h1>Tell us about yourself</h1>
-        <h2>In order to help us match you with like minded people, tell us about your hobbies and experience</h2>
-        <div>
-        <form method="post">
-       <!-- <fieldset class = "registration_form">-->
-            <fieldset>
-                <legend>Sign Up</legend>
-                <label for="first-name">First Name:<input for id="first-name" type="text" required/></label>
-                <label for="last-name">Last Name: <input id="last-name" type = "text"required/></label>
-                <label for="email">Email: <input id="email" type = "email"required/></label>
-                <label for ="new-password">Create a New Password: <input id="new-password" type="password"required pattern= [a-z0-5]{8,} /></label>
-        </fieldset>
-        <fieldset>
-            <legend>Account type (required)</legend>
-            <label for="idea"><input id="founder" type="radio" name="account-type" checked /> Founder</label>
-            <label for="joining"><input id="joining" type="radio" name="account-type" /> Joining a team</label>
-            <label for="bio">Provide a bio about your interests:
-            <textarea id="bio" name="bio" rows="3" cols="30" placeholder="I'm passionate about...."></textarea>
-            <label for="bio">Provide a bio about your background, education or experience:
-            <textarea id="bio" name="bio" rows="3" cols="30" placeholder="I've spent 5 years designing decal sticks...."></textarea>
-          <button type="submit" Submit></button>
-        </fieldset>
+    <section class="login">
+        <div class="header">
+            <div class ="welcome-text">
+            <img src="{% static 'landing/Rocket Logo.png' %}" alt="Logo" class="login-logo" width = 200px/>
+            <h1>Help us find your team</h1>
+            <p>
+                At Rocket, we understand that starting finding those early team members is vital to building a sucesuful team.
+                At Rocket we machine learning to not only find people with the skills you need but also match you to people
+                with similar interests and experiences. We believe by creating the right matches we can and kickstart their success by empowering collaboration</p>
+            </div>
+            <img src="{% static 'landing/Rocket Gif.gif' %}" alt="Logo" class="login-logo" width = 400px/>
+
         </div>
-        </form>
-    </div>
+        <div class="form-container">
+            <div class="registration_form">
+                <form method="post">
+                    {% csrf_token %}
+                    <fieldset>
+                        <legend>Sign Up</legend>
+                        <label for="first-name">First Name:
+                            <input id="first-name" type="text" name="first-name" required />
+                        </label>
+                        <label for="last-name">Last Name:
+                            <input id="last-name" type="text" name="last-name" required />
+                        </label>
+                        <label for="email">Email:
+                            <input id="email" type="email" name="email" required />
+                        </label>
+                        <label for="new-password">Create a New Password:
+                            <input id="new-password" type="password" name="new-password" required pattern="[a-z0-9]{8,}" />
+                        </label>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Account type (required)</legend>
+                        <div class="radio-input">
+                            <label for="founder">
+                                <input id="founder" type="radio" name="account-type" value="founder" checked />
+                                Founder
+                            </label>
+                            <label for="joining">
+                                <input id="joining" type="radio" name="account-type" value="joining" />
+                                Joining a team
+                            </label>
+                            <label for="undecided">
+                                <input id="undecided" type="radio" name="account-type" value="undecided" />
+                                Undecided
+                            </label>
+                            <span class="selection"></span>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Tell us about yourself and include your goals</legend>
+                        <label for="bio-interests">Provide a bio about your interests:
+                            <textarea id="bio-interests" name="bio-interests" rows="3" cols="30" placeholder="I'm passionate about...."></textarea>
+                        </label>
+                        <label for="bio-background">Provide a bio about your background, education or experience:
+                            <textarea id="bio-background" name="bio-background" rows="3" cols="30" placeholder="I've spent 5 years designing decal sticks...."></textarea>
+                        </label>
+                        <button type="submit">Submit</button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
     </section>
+    
+    <footer>
+        <!-- Footer content here -->
+    </footer>
 </body>
-<footer>
-</footer>
 </html>
