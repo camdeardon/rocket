@@ -13,11 +13,17 @@
         <div class="header">
             <div class ="welcome-text">
             <img src="{% static 'landing/Rocket Logo.png' %}" alt="Logo" class="login-logo" width = 200px/>
+
             <h1>Help us find your team</h1>
             <p>
                 At Rocket, we understand that starting finding those early team members is vital to building a sucesuful team.
                 At Rocket we machine learning to not only find people with the skills you need but also match you to people
-                with similar interests and experiences. We believe by creating the right matches we can and kickstart their success by empowering collaboration</p>
+                with similar interests and experiences. We believe by creating the right matches we can and kickstart their success by empowering collaboration.
+                </p>
+            <h1>
+                Sound intersting? Sign up and we'll reach out to you when the app is ready!</p>
+
+            </h1>
             </div>
             <img src="{% static 'landing/Rocket Gif.gif' %}" alt="Logo" class="login-logo" width = 400px/>
 
@@ -65,7 +71,10 @@
                             <textarea id="bio-interests" name="bio-interests" rows="3" cols="30" placeholder="I'm passionate about...."></textarea>
                         </label>
                         <label for="bio-background">Provide a bio about your background, education or experience:
-                            <textarea id="bio-background" name="bio-background" rows="3" cols="30" placeholder="I've spent 5 years designing decal sticks...."></textarea>
+                            <textarea id="bio-background" name="bio-background" rows="3" cols="30" placeholder="I've spent 5 years designing brand materials...."></textarea>
+                        </label>
+                        <label for="bio-interests">Tell us about the projects you'd like to join or found:
+                            <textarea id="bio-interests" name="bio-projects" rows="3" cols="30" placeholder="I'd like to join a early biotech company specialising in Immunotherapies...."></textarea>
                         </label>
                         <button type="submit">Submit</button>
                     </fieldset>
