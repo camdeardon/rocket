@@ -18,7 +18,7 @@
             <p>
                 At Rocket, we understand that starting finding those early team members is vital to building a sucesuful team.
                 At Rocket we machine learning to not only find people with the skills you need but also match you to people
-                with similar interests and experiences. We believe by creating the right matches we can and kickstart their success by empowering collaboration.
+                with similar interests and experiences. We believe by creating the right matches we can kickstart success through empowered collaboration.
                 </p>
             <h1>
                 Sound intersting? Sign up and we'll reach out to you when the app is ready!</p>
@@ -32,6 +32,7 @@
             <div class="registration_form">
                 <form method="post">
                     {% csrf_token %}
+                    {{ form.as_p }}
                     <fieldset>
                         <legend>Sign Up</legend>
                         <label for="first-name">First Name:
@@ -44,11 +45,11 @@
                             <input id="email" type="email" name="email" required />
                         </label>
                         <label for="new-password">Create a New Password:
-                            <input id="new-password" type="password" name="new-password" required pattern="[a-z0-9]{8,}" />
+                            <input id="new-password" type="password" name="new-password" /> <!-- #required pattern="[a-z0-9]{8,}" /> -->
                         </label>
                     </fieldset>
                     <fieldset>
-                        <legend>Account type (required)</legend>
+                        <legend>Who are you</legend>
                         <div class="radio-input">
                             <label for="founder">
                                 <input id="founder" type="radio" name="account-type" value="founder" checked />
